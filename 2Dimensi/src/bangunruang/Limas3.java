@@ -15,19 +15,17 @@ public class Limas3 extends Parent implements bangunRuang{
     }
     
     public double Luas(){
-       double tinggi_segitiga=Math.sqrt(Math.pow((alas/2),2) + Math.pow(tinggi,2));
-       double luas_segitiga=sisi*tinggi_segitiga/2;
-        luaspermukaan = super.getLuas()+ 3*luas_segitiga; 
+      double tinggi_segitiga=Math.sqrt(Math.pow((alas/2),2) + Math.pow(tinggi,2));
+       double luas_segitiga=(alas*tinggi_segitiga)/2;
+        luaspermukaan =(alas*tinggi3)/2+ 3*luas_segitiga; 
         return luaspermukaan;
     }
     
     public double Keliling(){
         return keliling;
-    }
-    
-    public double Volume(){
-        
-        volume = (super.getLuas()*tinggi)/3;
+    }    
+    public double Volume(){        
+        volume =(alas*tinggi3*tinggi)/6;
         return volume;
     }
 }
