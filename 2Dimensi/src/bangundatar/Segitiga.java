@@ -10,14 +10,12 @@ public class Segitiga extends Parent{
     }
     
     public double Luas(){
-        luas = alas*tinggi3/2;
+        luas = (alas*tinggi3)/2;
         return luas;
     }
     
     public double Keliling(){
-        double miring=Math.sqrt(Math.pow(alas,2) + Math.pow(tinggi3,2));
-        
-       keliling =  alas+2*miring;
+       keliling =  alas*3;
         return keliling;
     }
 }
