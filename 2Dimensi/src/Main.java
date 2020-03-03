@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import java.util.*;
 import bangundatar.*;
@@ -56,28 +52,32 @@ public class Main {
                     System.out.println("hasil dari bangun 2 dimensi nya yaitu :");
                     System.out.println("luas persegi panjang : " + perpan.getLuas());                                 
                     System.out.println("keliling persegi panjang : " +perpan.getKeliling() );
-                    System.out.println("input tinggi untuk mendapat kan volume dan luas permukaan bangun 3 dimensi ");
-                    
+                    System.out.println("input tinggi untuk mendapat kan volume dan luas permukaan bangun 3 dimensi ");                   
                     System.out.print("tinngi = : ");     tinggi = input.nextDouble();            
                     System.out.println("hasil dari bangun 3 dimensi yaitu : ");
                    Parent balok =new Balok(perpan.getLuas(),tinggi,perpan.panjang,perpan.lebar);
                     System.out.println("volume balok nya yaitu : " +balok.getVolume());
                     System.out.println("luas permukaan balok yaitu : " +balok.getLuasPermukaan());
-                    System.out.println("volume limas persegi panjang : ");
-                    System.out.println("luas permukaan limas persegi panjang : ");
+                  Parent limaspanjang=new LimasPanjang(perpan.getLuas(), tinggi, perpan.panjang,perpan.lebar);
+                    System.out.println("volume limas persegi panjang : " +limaspanjang.getVolume());
+                    System.out.println("luas permukaan limas persegi panjang : " + limaspanjang.getLuasPermukaan());
+                  
                     break;
             case 3 :
                     System.out.println("** anda dimenu segitiga **");
-                    System.out.println("input alas : "); double alas=input.nextInt();
-                    System.out.println("input tinggi : ");double tinggi3=input.nextInt();
+                    System.out.print("input alas : "); double alas=input.nextInt();
+                    System.out.print("input tinggi : ");double tinggi3=input.nextInt();
                    Parent segitiga = new Segitiga (alas,tinggi3);
                     System.out.println("luas segitiga : " +segitiga.getLuas());
                     System.out.println("keliling segitiga : " + segitiga.getKeliling());
                     System.out.println("input tinggi untuk mendapat kan volume dan luas permukaan bangun 3 dimensi ");
-                    System.out.println("tinggi : ");tinggi = input.nextDouble();  
+                    System.out.print("tinggi : ");tinggi = input.nextDouble();  
                   Parent limas3 =new Limas3(alas,tinggi3,tinggi);
-                     System.out.println("volume limas segitiga nya yaitu : " +limas3.getVolume());
+                    System.out.println("volume limas segitiga nya yaitu : " +limas3.getVolume());
                     System.out.println("luas permukaan limas segitiga yaitu : " +limas3.getLuasPermukaan());
+                  Parent prisma = new Prisma(alas,tinggi3,tinggi);  
+                    System.out.println("volume prisma segitiga : " +prisma.getVolume());
+                    System.out.println("luas permukaan prisma : " +prisma.getLuasPermukaan());
                 break;
             default :
                     System.out.println("!! MENU TIDAK TERSEDIA YA ...");
@@ -86,20 +86,7 @@ public class Main {
         }while(kembali=='y' || kembali =='Y');
         
         System.out.println("tengkiu !!!!");
-     
-        
-        
-        
-        
-        
-        
-      //  System.out.println("sisi = " + persegi.sisi);
-       // double tinggi = input.nextDouble();
-        //System.out.println("luas Persegi = " + persegi.getLuas());
-       // System.out.println("keliling = " + persegi.getKeliling());
-      //  Parent kubus = new Kubus(persegi.getLuas(),tinggi, persegi.sisi);
-       // System.out.println("luas permukaan = " + kubus.getLuasPermukaan());
-        //System.out.println("Volume = " + kubus.getVolume());
+ 
     }
     
 }
